@@ -1,4 +1,8 @@
-chromadb 
-llama-index
-fastapi 
+fastapi
 hypercorn
+requests
+httpx
+llama-index
+llama-index-llms-ollama
+llama-index-embeddings-huggingface
+sentence-transformers
