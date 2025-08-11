@@ -80,7 +80,7 @@ You can also edit these constants at the top of `main.py`.
 **Streaming response**
 
 - `text/plain` chunks, each chunk is a piece of the model output.
-- The very last chunk is the terminator: `[END_OF_STREAM]`.
+- The last chunk is the terminator: `[END_OF_STREAM]`.
 
 **cURL example**
 
@@ -89,8 +89,6 @@ curl -N -X POST http://localhost:3000/ask \
   -H "Content-Type: application/json" \
   -d '{"query":"What protections exist for renters?","language":"English"}'
 ```
-
-Use `-N` to disable buffering so you can see tokens stream in.
 
 ## How document selection works
 
@@ -107,8 +105,6 @@ If the model returns unknown files, the context falls back to `No legal document
 ## Testing
 
 ### Backend tests (pytest)
-
-If you’re keeping the Python tests from earlier work:
 
 ```bash
 pip install -r requirements.txt
